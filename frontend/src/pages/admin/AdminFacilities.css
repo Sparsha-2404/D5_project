@@ -1,0 +1,28 @@
+.admin-facilities { max-width: 1000px; }
+.af-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 24px; }
+.af-tabs { display: flex; gap: 4px; margin-bottom: 24px; background: white; border-radius: var(--radius-sm); padding: 4px; border: 1.5px solid var(--border); width: fit-content; }
+.au-tab { padding: 8px 18px; border: none; border-radius: 7px; font-size: 13px; font-weight: 500; color: var(--text-muted); background: none; cursor: pointer; transition: all 0.2s; }
+.au-tab.active { background: var(--primary); color: white; }
+
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.modal-card { background: white; border-radius: var(--radius); padding: 32px; width: 100%; max-width: 480px; }
+.modal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.modal-header h3 { font-size: 20px; font-weight: 700; }
+.modal-close { background: none; border: none; color: var(--text-muted); padding: 4px; border-radius: 6px; cursor: pointer; }
+.modal-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }
+
+.fac-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+.fac-admin-card { background: white; border: 1.5px solid var(--border); border-radius: var(--radius); padding: 20px; display: flex; align-items: flex-start; gap: 16px; }
+.fac-admin-icon { font-size: 30px; flex-shrink: 0; }
+.fac-admin-name { font-size: 16px; font-weight: 600; margin-bottom: 4px; }
+.fac-admin-desc { font-size: 13px; color: var(--text-muted); margin-bottom: 4px; }
+.fac-admin-cap { font-size: 12px; color: var(--text-muted); }
+
+.bookings-table-wrap { overflow-x: auto; border-radius: var(--radius); background: white; box-shadow: var(--shadow); }
+.bookings-table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.bookings-table thead { background: #f8fafc; }
+.bookings-table th { padding: 14px 16px; text-align: left; font-size: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); }
+.bookings-table td { padding: 13px 16px; border-top: 1px solid var(--border); vertical-align: middle; }
+.bookings-table tr:hover td { background: #fafafa; }
+.bk-name { font-weight: 600; }
+.bk-apt { font-size: 12px; color: var(--text-muted); }

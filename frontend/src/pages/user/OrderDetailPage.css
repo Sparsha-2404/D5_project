@@ -1,0 +1,98 @@
+.order-detail { max-width: 860px; }
+.back-btn { display: inline-flex; align-items: center; gap: 7px; background: none; border: none; color: var(--text-muted); font-size: 13px; font-weight: 500; padding: 0; margin-bottom: 18px; cursor: pointer; transition: color 0.15s; }
+.back-btn:hover { color: var(--text); }
+.od-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; }
+.od-badges { display: flex; gap: 8px; flex-wrap: wrap; }
+
+/* Tracking */
+.od-tracking { margin-bottom: 16px; }
+.od-tracking-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+.od-tracking-header h3 { margin: 0; }
+.live-dot { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: #16a34a; }
+.live-dot span { width: 8px; height: 8px; background: #16a34a; border-radius: 50%; animation: pulse 1.4s infinite; }
+@keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.5;transform:scale(1.3)} }
+
+.tracking-steps { display: flex; justify-content: space-between; position: relative; }
+.ts-item { display: flex; flex-direction: column; align-items: center; gap: 7px; flex: 1; position: relative; z-index: 1; }
+.ts-icon { color: #cbd5e1; transition: color 0.3s; }
+.ts-item.done .ts-icon { color: var(--success); }
+.ts-item.current .ts-icon { color: var(--accent); }
+.ts-dot { width: 18px; height: 18px; border-radius: 50%; background: #e2e8f0; }
+.ts-label { font-size: 11px; text-align: center; color: var(--text-muted); text-transform: capitalize; font-weight: 500; }
+.ts-item.done .ts-label, .ts-item.current .ts-label { color: var(--text); font-weight: 600; }
+.ts-line { position: absolute; top: 9px; left: 60%; width: calc(100% - 18px); height: 2px; background: #e2e8f0; z-index: 0; }
+.ts-item.done .ts-line { background: var(--success); }
+
+.assigned-staff { margin-top: 18px; padding: 12px 16px; background: #f0fdf4; border-radius: var(--radius-sm); font-size: 13px; color: #166534; }
+.assigned-staff a { color: var(--accent); }
+
+/* Grid */
+.od-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
+.od-history { grid-column: 1/-1; }
+
+.od-items { display: flex; flex-direction: column; gap: 8px; margin-top: 14px; }
+.od-item-row { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--border-soft); font-size: 13px; }
+.oi-name { flex: 1; }
+.oi-qty { color: var(--text-muted); }
+.oi-price { font-weight: 700; }
+.od-total-row { display: flex; justify-content: space-between; font-size: 15px; font-weight: 800; padding-top: 10px; }
+
+.od-info-list { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.od-info-row { display: flex; justify-content: space-between; align-items: center; font-size: 13px; }
+.od-info-row span:first-child { color: var(--text-muted); }
+
+.history-list { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.history-item { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.hi-note { font-size: 13px; color: var(--text-muted); flex: 1; }
+.hi-time { font-size: 11px; color: var(--text-light); }
+
+/* Actions */
+.od-actions { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.reviewed-badge { font-size: 13px; color: var(--success); font-weight: 600; }
+
+/* Review Modal */
+.modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.45); z-index: 200; display: flex; align-items: center; justify-content: center; padding: 20px; }
+.modal-card { background: white; border-radius: var(--radius); padding: 32px; width: 100%; max-width: 460px; max-height: 90vh; overflow-y: auto; }
+.modal-card h3 { font-size: 20px; font-weight: 700; }
+.modal-actions { display: flex; gap: 12px; justify-content: flex-end; margin-top: 8px; }
+
+.star-rating { display: flex; gap: 4px; }
+.star-btn { background: none; border: none; color: #d1d5db; padding: 2px; transition: color 0.12s; }
+.star-btn.filled { color: #f59e0b; }
+.star-btn:hover { color: #f59e0b; }
+
+@media (max-width: 640px) {
+  .od-grid { grid-template-columns: 1fr; }
+  .od-history { grid-column: 1; }
+  .tracking-steps { flex-direction: column; gap: 12px; align-items: flex-start; }
+  .ts-item { flex-direction: row; gap: 12px; }
+  .ts-line { display: none; }
+}
+
+/* Confirmation banners */
+.confirm-banner { display: flex; align-items: flex-start; gap: 14px; padding: 16px 20px; background: #fffbf0; border: 1.5px solid var(--accent-light); border-radius: var(--radius); margin-bottom: 16px; }
+.confirm-banner svg { color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+.confirm-banner.success { background: #f0fdf4; border-color: #bbf7d0; }
+.confirm-banner.success svg { color: var(--success); }
+.cb-title { font-size: 14px; font-weight: 700; margin-bottom: 2px; }
+.cb-sub { font-size: 13px; color: var(--text-muted); }
+.cb-actions { display: flex; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
+
+.confirmed-banner { padding: 12px 16px; background: #f0fdf4; border-radius: var(--radius-sm); font-size: 13px; color: #15803d; font-weight: 600; margin-bottom: 16px; }
+.rejected-banner { padding: 12px 16px; background: #fef2f2; border-radius: var(--radius-sm); font-size: 13px; color: #dc2626; font-weight: 500; margin-bottom: 16px; }
+
+/* OTP card */
+.otp-card { margin-bottom: 16px; }
+.otp-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+.otp-card-header h3 { margin: 0; }
+.otp-card-header svg { color: var(--accent); }
+.otp-display { font-size: 42px; font-weight: 900; letter-spacing: 12px; color: var(--primary); text-align: center; padding: 16px; background: var(--bg); border-radius: var(--radius-sm); margin-bottom: 8px; font-family: monospace; }
+.otp-hint { font-size: 12px; color: var(--text-muted); text-align: center; }
+
+/* Staff note display */
+.staff-note-display { margin-top: 12px; padding: 10px 14px; background: #fffbf0; border-radius: var(--radius-sm); font-size: 13px; color: var(--accent-dark); border-left: 3px solid var(--accent); }
+
+/* OTP input */
+.otp-input-wrap { display: flex; gap: 12px; align-items: center; }
+.otp-input { font-size: 28px; letter-spacing: 10px; font-weight: 700; text-align: center; padding: 12px 16px; border: 2px solid var(--border); border-radius: var(--radius-sm); outline: none; width: 140px; font-family: monospace; }
+.otp-input:focus { border-color: var(--accent); }
