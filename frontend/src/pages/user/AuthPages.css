@@ -1,0 +1,102 @@
+/* Auth pages - matching client design: white card, clean minimal */
+.auth-page {
+  min-height: 100vh;
+  background: var(--off-white);
+  display: flex; align-items: center; justify-content: center;
+  padding: 24px;
+}
+
+.auth-card {
+  background: white;
+  border-radius: var(--radius);
+  padding: 40px 36px;
+  width: 100%; max-width: 420px;
+  box-shadow: 0 4px 32px rgba(0,0,0,0.08);
+  position: relative;
+}
+
+.auth-close {
+  position: absolute; top: 20px; left: 20px;
+  background: none; border: none; font-size: 20px;
+  color: var(--text-muted); cursor: pointer; line-height: 1;
+}
+
+.auth-logo-row {
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 28px;
+}
+
+.auth-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px; color: var(--text);
+  letter-spacing: 0.06em; margin-bottom: 28px;
+}
+
+/* Pill inputs matching client design */
+.auth-input-group { margin-bottom: 16px; }
+.auth-input-group label {
+  display: block; font-size: 10px; font-weight: 700;
+  color: var(--primary); text-transform: uppercase;
+  letter-spacing: 0.1em; margin-bottom: 6px;
+}
+.auth-input-wrap { position: relative; }
+.auth-input-wrap input {
+  width: 100%; padding: 13px 18px;
+  background: var(--gray-100);
+  border: 2px solid transparent;
+  border-radius: var(--radius-pill);
+  font-size: 14px; font-family: 'Poppins', sans-serif;
+  color: var(--text); outline: none; transition: 0.2s;
+}
+.auth-input-wrap input:focus {
+  border-color: var(--primary);
+  background: white;
+  box-shadow: 0 0 0 4px rgba(143,80,255,0.1);
+}
+.auth-input-wrap input::placeholder { color: var(--gray-400); }
+.auth-eye-btn {
+  position: absolute; right: 14px; top: 50%;
+  transform: translateY(-50%);
+  background: none; border: none; color: var(--gray-400);
+  cursor: pointer; display: flex; align-items: center;
+}
+
+.auth-btn {
+  width: 100%; padding: 14px;
+  background: var(--primary); color: white;
+  border: none; border-radius: var(--radius-pill);
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 18px; letter-spacing: 0.12em;
+  cursor: pointer; transition: all 0.2s;
+  margin-top: 8px;
+}
+.auth-btn:hover:not(:disabled) { background: var(--primary-dark); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(143,80,255,0.3); }
+.auth-btn:disabled { opacity: 0.6; cursor: not-allowed; }
+
+.auth-switch {
+  text-align: center; font-size: 14px;
+  color: var(--text-muted); margin-top: 20px;
+}
+.auth-switch a { color: var(--secondary); font-weight: 700; }
+.auth-switch a:hover { text-decoration: underline; }
+
+.auth-forgot {
+  display: block; text-align: right;
+  font-size: 13px; color: var(--text-muted);
+  margin-top: 6px; cursor: pointer; background: none; border: none;
+  font-family: 'Poppins', sans-serif;
+}
+.auth-forgot:hover { color: var(--primary); }
+
+.auth-divider {
+  display: flex; align-items: center; gap: 12px;
+  margin: 20px 0; color: var(--text-light); font-size: 12px;
+}
+.auth-divider::before, .auth-divider::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
+
+@media(max-width: 480px) {
+  .auth-card { padding: 28px 20px; }
+  .auth-title { font-size: 30px; }
+}

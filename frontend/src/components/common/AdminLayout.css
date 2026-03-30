@@ -1,0 +1,21 @@
+.al-root { display: flex; min-height: 100vh; background: #f1f5f9; }
+.al-sidebar { width: 232px; background: #111111; position: fixed; top: 0; left: 0; bottom: 0; display: flex; flex-direction: column; z-index: 100; }
+.al-logo { display: flex; align-items: center; gap: 10px; padding: 22px 18px; border-bottom: 1px solid rgba(255,255,255,0.06); }
+.al-logo-icon { width: 34px; height: 34px; background: #f97316; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: white; }
+.al-logo-name { font-size: 15px; font-weight: 800; color: white; }
+.al-logo-sub { font-size: 11px; color: rgba(255,255,255,0.3); }
+.al-nav { flex: 1; padding: 10px; display: flex; flex-direction: column; gap: 2px; }
+.al-nav-item { display: flex; align-items: center; gap: 9px; padding: 9px 12px; border-radius: 8px; color: rgba(255,255,255,0.45); font-size: 13px; font-weight: 500; transition: 0.15s; }
+.al-nav-item:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.85); }
+.al-nav-item.active { background: rgba(200,168,233,0.2); color: #C8A8E9; color: white; }
+.al-footer { padding: 14px 10px; border-top: 1px solid rgba(255,255,255,0.06); display: flex; flex-direction: column; gap: 8px; }
+.al-back { display: flex; align-items: center; gap: 7px; background: rgba(255,255,255,0.05); border: none; color: rgba(255,255,255,0.5); padding: 8px 12px; border-radius: 8px; font-size: 12px; width: 100%; transition: 0.15s; }
+.al-back:hover { background: rgba(255,255,255,0.09); color: white; }
+.al-user { display: flex; align-items: center; gap: 9px; }
+.al-avatar { width: 32px; height: 32px; background: rgba(200,168,233,0.2); color: #C8A8E9; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; color: white; flex-shrink: 0; }
+.al-uname { font-size: 12px; font-weight: 600; color: white; }
+.al-urole { font-size: 11px; color: rgba(255,255,255,0.3); }
+.al-logout { display: flex; align-items: center; gap: 7px; background: rgba(239,68,68,0.1); border: none; color: #fca5a5; padding: 8px 12px; border-radius: 8px; font-size: 12px; width: 100%; transition: 0.15s; }
+.al-logout:hover { background: rgba(239,68,68,0.2); }
+.al-main { flex: 1; margin-left: 232px; padding: 28px 32px; }
+@media (max-width: 768px) { .al-sidebar { display: none; } .al-main { margin-left: 0; padding: 16px; } }

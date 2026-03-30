@@ -1,0 +1,38 @@
+.wallet-page { max-width: 900px; }
+.wallet-grid { display: grid; grid-template-columns: 340px 1fr; gap: 20px; align-items: start; }
+
+.wallet-balance-card {
+  background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+  border-radius: var(--radius); padding: 28px;
+  color: white; position: sticky; top: 28px;
+}
+.wbc-label { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.5); margin-bottom: 10px; }
+.wbc-amount { font-size: 42px; font-weight: 800; letter-spacing: -0.02em; margin-bottom: 4px; }
+.wbc-sub { font-size: 12px; color: rgba(255,255,255,0.4); margin-bottom: 28px; }
+
+.topup-section { background: rgba(255,255,255,0.07); border-radius: var(--radius-sm); padding: 20px; }
+.topup-title { font-size: 13px; font-weight: 600; color: rgba(255,255,255,0.6); margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.05em; }
+.topup-amounts { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
+.topup-chip { padding: 6px 14px; border: 1.5px solid rgba(255,255,255,0.15); border-radius: 99px; background: none; color: rgba(255,255,255,0.6); font-size: 13px; font-weight: 600; transition: 0.15s; }
+.topup-chip:hover { border-color: var(--accent); color: white; }
+.topup-chip.active { background: var(--accent); border-color: var(--accent); color: white; }
+.topup-custom { width: 100%; padding: 10px 14px; border: 1.5px solid rgba(255,255,255,0.15); border-radius: var(--radius-sm); background: rgba(255,255,255,0.05); color: white; font-size: 14px; margin-bottom: 14px; outline: none; font-family: inherit; }
+.topup-custom::placeholder { color: rgba(255,255,255,0.3); }
+.topup-custom:focus { border-color: var(--accent); }
+
+.wallet-txns h3 { font-size: 16px; font-weight: 700; }
+.txn-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+.txn-list { display: flex; flex-direction: column; gap: 0; }
+.txn-row { display: flex; align-items: center; gap: 14px; padding: 14px 0; border-bottom: 1px solid var(--border-soft); }
+.txn-row:last-child { border-bottom: none; }
+.txn-icon { width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.txn-icon.credit { background: #dcfce7; color: #15803d; }
+.txn-icon.debit { background: #fef2f2; color: #dc2626; }
+.txn-info { flex: 1; }
+.txn-desc { font-size: 13px; font-weight: 500; color: var(--text); margin-bottom: 2px; }
+.txn-date { font-size: 12px; color: var(--text-light); }
+.txn-amount { font-size: 15px; font-weight: 700; flex-shrink: 0; }
+.txn-amount.credit { color: #15803d; }
+.txn-amount.debit { color: #dc2626; }
+
+@media (max-width: 768px) { .wallet-grid { grid-template-columns: 1fr; } .wallet-balance-card { position: static; } }

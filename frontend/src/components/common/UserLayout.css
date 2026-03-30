@@ -1,0 +1,105 @@
+.ul-root { display: flex; min-height: 100vh; }
+
+/* Sidebar */
+.ul-sidebar {
+  width: var(--nav-width);
+  background: #111111;
+  position: fixed; top: 0; left: 0; bottom: 0;
+  z-index: 100; display: flex; flex-direction: column;
+  transition: transform 0.28s cubic-bezier(.4,0,.2,1);
+}
+.ul-logo {
+  display: flex; align-items: center; gap: 12px;
+  padding: 22px 18px 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.ul-brand-name {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 24px; color: white; letter-spacing: 0.04em;
+}
+.ul-brand-sub { font-size: 10px; color: rgba(255,255,255,0.3); letter-spacing: 0.06em; }
+
+.ul-user-card {
+  display: flex; align-items: center; gap: 10px;
+  margin: 12px; background: rgba(143,80,255,0.15);
+  border: 1px solid rgba(143,80,255,0.3);
+  border-radius: var(--radius-sm); padding: 12px;
+}
+.ul-avatar {
+  width: 36px; height: 36px; background: var(--primary);
+  border-radius: 50%; display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 15px; color: white; flex-shrink: 0;
+}
+.ul-uname { font-size: 13px; font-weight: 600; color: white; margin-bottom: 1px; }
+.ul-uapt  { font-size: 11px; color: rgba(255,255,255,0.35); }
+
+/* Nav */
+.ul-nav { flex: 1; padding: 8px 10px; display: flex; flex-direction: column; gap: 2px; overflow-y: auto; }
+.ul-nav-item {
+  display: flex; align-items: center; gap: 10px;
+  padding: 10px 12px; border-radius: var(--radius-sm);
+  color: rgba(255,255,255,0.4); font-size: 13px;
+  font-weight: 500; transition: all 0.15s; text-decoration: none;
+}
+.ul-nav-item:hover { background: rgba(255,255,255,0.07); color: rgba(255,255,255,0.85); }
+.ul-nav-item.active { background: var(--primary); color: white; }
+.ul-nav-icon {
+  width: 28px; height: 28px; border-radius: 7px;
+  background: rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.ul-nav-item.active .ul-nav-icon { background: rgba(255,255,255,0.2); }
+.ul-nav-label { flex: 1; }
+.ul-nav-arrow { color: rgba(255,255,255,0.15); transition: 0.15s; }
+.ul-nav-item:hover .ul-nav-arrow { transform: translateX(2px); color: rgba(255,255,255,0.4); }
+.ul-nav-item.active .ul-nav-arrow { color: rgba(255,255,255,0.5); }
+
+/* Footer */
+.ul-footer { padding: 12px; border-top: 1px solid rgba(255,255,255,0.07); }
+.ul-logout {
+  display: flex; align-items: center; justify-content: center; gap: 8px;
+  width: 100%; padding: 9px; background: rgba(254,20,71,0.12);
+  border: none; border-radius: var(--radius-pill); color: #ff6b8a;
+  font-size: 13px; font-weight: 600; cursor: pointer; transition: 0.15s; font-family: 'Poppins', sans-serif;
+}
+.ul-logout:hover { background: rgba(254,20,71,0.2); }
+
+.ul-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55); z-index: 99; }
+.ul-main { flex: 1; margin-left: var(--nav-width); display: flex; flex-direction: column; min-height: 100vh; background: var(--bg); }
+
+/* Topbar */
+.ul-topbar { display: none; align-items: center; justify-content: space-between; padding: 0 16px; height: 56px; background: #111111; position: sticky; top: 0; z-index: 50; }
+.ul-topbar-title { font-family: 'Bebas Neue', sans-serif; font-size: 18px; color: white; letter-spacing: 0.05em; }
+.ul-menu-btn { background: none; border: none; color: white; padding: 6px; cursor: pointer; }
+
+/* Desktop strip */
+.ul-desktop-strip {
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 10px 28px; background: white; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 50;
+}
+.ul-strip-text { font-size: 12px; color: var(--text-muted); font-weight: 500; }
+.ul-icon-btn {
+  background: none; border: none; color: var(--text-muted);
+  padding: 8px; border-radius: 8px; position: relative;
+  display: flex; align-items: center; cursor: pointer; transition: 0.15s;
+}
+.ul-icon-btn:hover { background: var(--primary-pale); color: var(--primary); }
+.ul-badge {
+  position: absolute; top: 1px; right: 1px;
+  background: var(--secondary); color: white;
+  font-size: 9px; font-weight: 700; min-width: 16px; height: 16px;
+  border-radius: 99px; display: flex; align-items: center; justify-content: center; padding: 0 3px;
+}
+
+.ul-content { padding: 28px 32px; flex: 1; }
+
+@media (max-width: 768px) {
+  .ul-sidebar { transform: translateX(-100%); }
+  .ul-sidebar.open { transform: translateX(0); }
+  .ul-overlay { display: block; }
+  .ul-main { margin-left: 0; }
+  .ul-topbar { display: flex; }
+  .ul-desktop-strip { display: none; }
+  .ul-content { padding: 16px; }
+}
