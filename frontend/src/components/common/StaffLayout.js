@@ -7,6 +7,7 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 import './StaffLayout.css';
+import logo from '../../assets/D5logo.jpeg';
 
 const navItems = [
   { to: '/staff', icon: ClipboardList, label: 'Active Tasks', end: true, desc: 'Your assigned work' },
@@ -38,13 +39,7 @@ export default function StaffLayout() {
       {/* Sidebar */}
       <aside className={`staff-sidebar ${mobileOpen ? 'open' : ''}`}>
         <div className="staff-logo">
-          <svg width="40" height="40" viewBox="0 0 100 100" fill="none">
-            <rect width="100" height="100" rx="12" fill="white"/>
-            <path d="M22 18 L22 82 L48 82 C70 82 80 68 80 50 C80 32 70 18 48 18 Z" fill="#111111"/>
-            <circle cx="50" cy="50" r="24" fill="#8F50FF"/>
-            <circle cx="50" cy="50" r="19" stroke="white" strokeWidth="2.5" fill="none"/>
-            <text x="50" y="59" textAnchor="middle" fill="white" fontSize="20" fontWeight="700" fontFamily="Georgia,serif">5</text>
-          </svg>
+          <img src={logo} alt="Logo" height={36} />
           <div>
             <div className="staff-logo-name">D5</div>
             <div className="staff-logo-sub">Staff Portal</div>
