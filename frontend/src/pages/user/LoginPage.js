@@ -4,16 +4,8 @@ import { useAuth } from '../../context/AuthContext';
 import toast from 'react-hot-toast';
 import { Eye, EyeOff, LogIn } from 'lucide-react';
 import './AuthPages.css';
+import logo from '../../assets/D5logo.jpeg';
 
-const D5Logo = ({ size = 48 }) => (
-  <svg width={size} height={size} viewBox="0 0 100 100" fill="none">
-    <rect width="100" height="100" rx="14" fill="#111111"/>
-    <path d="M22 18 L22 82 L48 82 C70 82 80 68 80 50 C80 32 70 18 48 18 Z" fill="white"/>
-    <circle cx="50" cy="50" r="24" fill="#8F50FF"/>
-    <circle cx="50" cy="50" r="19" stroke="white" strokeWidth="2.5" fill="none"/>
-    <text x="50" y="59" textAnchor="middle" fill="white" fontSize="20" fontWeight="700" fontFamily="Georgia,serif">5</text>
-  </svg>
-);
 
 export default function LoginPage() {
   const [form, setForm] = useState({ email: '', password: '' });
@@ -38,7 +30,7 @@ export default function LoginPage() {
   return (
     <div className="auth-page">
       <div className="auth-card fade-up">
-        <div className="auth-logo-row"><D5Logo size={52} /></div>
+        <div className="auth-logo-row"><img src={logo} alt="Logo" height={52} /></div>
         <div className="auth-title">LOGIN</div>
 
         <form onSubmit={handleSubmit}>

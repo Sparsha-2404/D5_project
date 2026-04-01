@@ -2,6 +2,7 @@ import { Outlet, NavLink, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { LayoutDashboard, Package, ShoppingBag, Users, CalendarCheck, LogOut, Building2, ArrowLeft, Star, Navigation, HardHat } from 'lucide-react';
 import './AdminLayout.css';
+import logo from '../../assets/D5logo.jpeg';
 
 const navItems = [
   { to: '/admin', icon: LayoutDashboard, label: 'Dashboard', end: true },
@@ -20,13 +21,7 @@ export default function AdminLayout() {
     <div className="al-root">
       <aside className="al-sidebar">
         <div className="al-logo">
-          <svg width="36" height="36" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="100" height="100" rx="12" fill="white"/>
-            <path d="M22 18 L22 82 L48 82 C70 82 80 68 80 50 C80 32 70 18 48 18 Z" fill="#111111"/>
-            <circle cx="50" cy="50" r="24" fill="#8F50FF"/>
-            <circle cx="50" cy="50" r="19" stroke="white" strokeWidth="2.5" fill="none"/>
-            <text x="50" y="59" textAnchor="middle" fill="white" fontSize="20" fontWeight="700" fontFamily="Georgia,serif">5</text>
-          </svg>
+          <img src={logo} alt="Logo" height={36} />
           <div><div className="al-logo-name">D5</div><div className="al-logo-sub">Admin Panel</div></div>
         </div>
         <nav className="al-nav">
