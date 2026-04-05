@@ -12,7 +12,7 @@
 
 .service-group { margin-bottom: 32px; }
 .group-title {
-  font-family: 'DM Serif Display', serif; font-size: 17px;
+  font-family: 'Bebas Neue', sans-serif; font-size: 22px; font-weight: 500;
   color: var(--d5-purple-mid); margin-bottom: 14px;
   padding-bottom: 10px; border-bottom: 2px solid var(--d5-purple-light);
   display: flex; align-items: center; gap: 10px;
@@ -28,12 +28,12 @@
 }
 .service-card:hover { border-color: var(--d5-purple-soft); box-shadow: var(--shadow); transform: translateY(-2px); }
 
-.service-name { font-size: 15px; font-weight: 800; color: var(--d5-purple-deep); margin-bottom: 4px; }
+.service-name { font-size: 16px; font-weight: 600; font-family: 'Poppins', sans-serif; color: var(--d5-purple-deep); margin-bottom: 4px; }
 .service-desc { font-size: 12px; color: var(--text-muted); }
 .service-meta { display: flex; gap: 10px; }
 .service-time, .service-unit { font-size: 11px; color: var(--text-muted); background: var(--d5-purple-pale); padding: 2px 8px; border-radius: 99px; font-weight: 600; }
 .service-footer { display: flex; justify-content: space-between; align-items: center; }
-.service-price { font-size: 20px; font-weight: 900; color: var(--d5-purple-deep); font-family: 'DM Serif Display', serif; }
+.service-price { font-size: 14px; font-weight: 400; color: var(--d5-purple-deep); font-family: 'Poppins', sans-serif; }
 
 .qty-control {
   display: flex; align-items: center; gap: 10px;
