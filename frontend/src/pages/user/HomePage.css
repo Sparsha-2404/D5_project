@@ -31,7 +31,7 @@
   padding: 11px 22px; background: var(--d5-green);
   color: white; border: none; border-radius: 99px;
   font-size: 14px; font-weight: 700; cursor: pointer;
-  transition: all 0.2s; font-family: 'Nunito', sans-serif;
+  transition: all 0.2s; font-family: 'Poppins', sans-serif;
 }
 .hero-btn-primary:hover { background: #4a8a2a; transform: translateY(-1px); }
 .hero-btn-ghost {
@@ -39,7 +39,7 @@
   padding: 10px 20px; background: rgba(255,255,255,0.12);
   border: 1px solid rgba(255,255,255,0.25); border-radius: 99px;
   color: white; font-size: 13px; font-weight: 600;
-  cursor: pointer; transition: 0.15s; font-family: 'Nunito', sans-serif;
+  cursor: pointer; transition: 0.15s; font-family: 'Poppins', sans-serif;
   backdrop-filter: blur(8px);
 }
 .hero-btn-ghost:hover { background: rgba(255,255,255,0.22); }
@@ -62,7 +62,7 @@
 .section-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px; }
 .section-header h2 { font-family: 'Bebas Neue', sans-serif; font-size: 32px; font-weight: 500; }
 .section-sub { font-size: 13px; color: var(--text-muted); margin-bottom: 18px; font-weight: 500; }
-.see-all { display: inline-flex; align-items: center; gap: 3px; font-size: 13px; font-weight: 700; color: var(--d5-purple-mid); background: none; border: none; cursor: pointer; font-family: 'Nunito', sans-serif; }
+.see-all { display: inline-flex; align-items: center; gap: 3px; font-size: 13px; font-weight: 700; color: var(--d5-purple-mid); background: none; border: none; cursor: pointer; font-family: 'Poppins', sans-serif; }
 .see-all:hover { color: var(--d5-purple-deep); }
 
 /* ── TOP PICKS — photo cards matching client design ── */
@@ -89,7 +89,7 @@
   padding: 9px 16px; background: var(--d5-green);
   color: white; border: none; border-radius: 99px;
   font-size: 13px; font-weight: 700; cursor: pointer;
-  transition: all 0.18s; font-family: 'Nunito', sans-serif;
+  transition: all 0.18s; font-family: 'Poppins', sans-serif;
   width: 100%; margin-top: auto;
 }
 .btn-shop-now:hover { background: #4a8a2a; transform: translateY(-1px); }
@@ -125,7 +125,7 @@
   display: flex; flex-direction: column; align-items: center; gap: 8px;
   padding: 18px 12px; background: white;
   border: 1.5px solid var(--border-soft); border-radius: var(--radius);
-  transition: all 0.18s; cursor: pointer; font-family: 'Nunito', sans-serif;
+  transition: all 0.18s; cursor: pointer; font-family: 'Poppins', sans-serif;
 }
 .quick-card:hover { border-color: var(--d5-purple-soft); background: var(--d5-purple-pale); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
 .qa-emoji { font-size: 26px; }

@@ -1,7 +1,7 @@
 .facilities-page { max-width: 960px; }
 
 .fac-tabs { display:flex; gap:4px; margin-bottom:24px; background:white; border-radius:99px; padding:4px; border:1.5px solid var(--border-soft); width:fit-content; }
-.fac-tab { padding:9px 22px; border:none; border-radius:99px; font-size:13px; font-weight:700; color:var(--text-muted); background:none; cursor:pointer; transition:all 0.2s; font-family:'Nunito',sans-serif; display:flex; align-items:center; gap:6px; }
+.fac-tab { padding:9px 22px; border:none; border-radius:99px; font-size:13px; font-weight:700; color:var(--text-muted); background:none; cursor:pointer; transition:all 0.2s; font-family:'Poppins',sans-serif; display:flex; align-items:center; gap:6px; }
 .fac-tab.active { background:var(--d5-purple-deep); color:white; }
 .fac-count { background:var(--d5-purple-soft); color:var(--d5-purple-deep); font-size:10px; font-weight:800; padding:1px 7px; border-radius:99px; }
 
@@ -29,7 +29,7 @@
 
 /* Time slots */
 .time-slots { display:flex; flex-wrap:wrap; gap:7px; }
-.time-slot { padding:6px 12px; border:1.5px solid var(--border); border-radius:8px; font-size:12px; font-weight:600; background:white; color:var(--text-muted); cursor:pointer; transition:0.15s; font-family:'Nunito',sans-serif; }
+.time-slot { padding:6px 12px; border:1.5px solid var(--border); border-radius:8px; font-size:12px; font-weight:600; background:white; color:var(--text-muted); cursor:pointer; transition:0.15s; font-family:'Poppins',sans-serif; }
 .time-slot:hover { border-color:var(--d5-purple-mid); color:var(--d5-purple-mid); }
 .time-slot.active { background:var(--d5-purple-deep); color:white; border-color:var(--d5-purple-deep); }
 
